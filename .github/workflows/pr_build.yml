@@ -1,5 +1,5 @@
 # A workflow to build and upload APKs for pull requests
-name: Build
+name: Build apk
 
 on:
   push: 
