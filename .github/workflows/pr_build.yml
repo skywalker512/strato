@@ -2,14 +2,8 @@
 name: PR Build
 
 on:
-  pull_request:
-    types: [ opened, synchronize, reopened ]
+  push: 
     branches: [ master ]
-
-# Only allow the latest build to run for a given PR, and cancel any previous builds
-concurrency:
-  group: ${{ github.workflow }}-${{ github.ref }}
-  cancel-in-progress: true
 
 jobs:
   build:
